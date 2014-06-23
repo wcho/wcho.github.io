@@ -12,19 +12,19 @@ function log() {
 }
 function allowDrop(ev) {
     ev.preventDefault();
-    console.log('allowDrop', ev);
+    log('allowDrop', ev);
 }
 
 function drag(ev) {
     ev.dataTransfer.setData("Text", ev.target.id);
-    console.log('drag', ev);
+    log('drag', ev);
 }
 
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("Text");
     ev.target.appendChild(document.getElementById(data));
-    console.log('drop', ev, data);
+    log('drop', ev, data);
 }
 </script>
 </head>
