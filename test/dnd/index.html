@@ -5,10 +5,10 @@
 #div1 {width:334px;height:470px;padding:10px;border:1px solid #aaaaaa;}
 </style>
 <script>
-function log() {
+function log(a) {
     var div2 = document.getElementById('div2');
     var aa = div2.innerHTML;
-    div2.innerHTML = aa + '<br>' + arguments;
+    div2.innerHTML = aa + '<br>' + a;
 }
 function allowDrop(ev) {
     ev.preventDefault();
@@ -33,7 +33,7 @@ function drop(ev) {
 <p>Drag image into the rectangle:</p>
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2">msg</div>
 <br>
 <img id="drag1" src="http://pds21.egloos.com/pds/201105/13/05/c0100805_4dcd02cd139fb.jpg" draggable="true" ondragstart="drag(event)" >
 aaaaaa
