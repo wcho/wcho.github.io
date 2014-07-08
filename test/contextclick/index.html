@@ -1,9 +1,18 @@
+<!DOCTYPE html>
 <html>
+<head>
+<script>
+function myFunction()
+{
+document.getElementById("output").innerHTML="success";
+}
+</script>
+</head>
 <body>
 
-<div id='elem' oncontextmenu="javascript:this.innerHTML='success';return false;">
-Lorem Ipsum
-</div>
+<p id="elem" contextmenu="myFunction()">Contextclick this paragraph to trigger a function.</p>
+
+<p id="output">This should be changed to 'success'</p>
 
 </body>
 </html>
