@@ -2,10 +2,11 @@
 <html>
 <head>
 <script>
-function myFunction()
+function myFunction(e)
 {
-document.getElementById("output").innerHTML="success";
-return false;
+  e.preventDefault();
+  document.getElementById("output").innerHTML="success";
+  return false;
 }
 </script>
 </head>
