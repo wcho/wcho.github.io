@@ -22,7 +22,9 @@ document.getElementById("elem2").addEventListener("mousedown", function myFuncti
     var rightclick;
     if (e.which) rightclick = (e.which == 3);
     else if (e.button) rightclick = (e.button == 2);
-    alert(rightclick);
+    if (rightclick) {
+      document.getElementById("output2").innerHTML="success";
+    }
   });
 </script>
 </body>
