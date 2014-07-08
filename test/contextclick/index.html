@@ -6,14 +6,23 @@
 <body>
 
 <p id="elem">Contextclick this paragraph to trigger a function.</p>
-
 <p id="output">This should be changed to 'success'</p>
+
+<p id="elem2">Contextclick this paragraph to trigger a function.</p>
+<p id="output2">This should be changed to 'success'</p>
 <script>
 document.getElementById("elem").addEventListener("contextmenu", function myFunction(e)
   {
     e.preventDefault();
     document.getElementById("output").innerHTML="success";
     return false;
+  });
+document.getElementById("elem2").addEventListener("onmousedown", function myFunction(e)
+  {
+    var rightclick;
+    if (e.which) rightclick = (e.which == 3);
+    else if (e.button) rightclick = (e.button == 2);
+    alert(rightclick);
   });
 </script>
 </body>
