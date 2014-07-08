@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+</head>
+<body>
+
+<p id="elem">Contextclick this paragraph to trigger a function.</p>
+
+<p id="output">This should be changed to 'success'</p>
 <script>
-function myFunction(e)
+document.getElementById("elem").addEventListener("contextmenu", function myFunction(e)
 {
   e.preventDefault();
   document.getElementById("output").innerHTML="success";
   return false;
 }
 </script>
-</head>
-<body>
-
-<p id="elem" oncontextmenu="myFunction()">Contextclick this paragraph to trigger a function.</p>
-
-<p id="output">This should be changed to 'success'</p>
-
 </body>
 </html>
