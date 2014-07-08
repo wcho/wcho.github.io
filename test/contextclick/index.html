@@ -19,6 +19,7 @@ document.getElementById("elem").addEventListener("contextmenu", function myFunct
   });
 document.getElementById("elem2").addEventListener("mousedown", function myFunction(e)
   {
+    e.preventDefault();
     var rightclick;
     if (e.which) rightclick = (e.which == 3);
     else if (e.button) rightclick = (e.button == 2);
