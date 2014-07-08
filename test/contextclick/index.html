@@ -13,20 +13,20 @@
 <script>
 document.getElementById("elem").addEventListener("contextmenu", function myFunction(e)
   {
-    e.preventDefault();
+    //e.preventDefault();
     document.getElementById("output").innerHTML="success";
-    return false;
+    //return false;
   });
 document.getElementById("elem2").addEventListener("mousedown", function myFunction(e)
   {
-    e.preventDefault();
+    //e.preventDefault();
     var rightclick;
     if (e.which) rightclick = (e.which == 3);
     else if (e.button) rightclick = (e.button == 2);
     if (rightclick) {
       document.getElementById("output2").innerHTML="success";
     }
-    return false;
+    //return false;
   });
 </script>
 </body>
