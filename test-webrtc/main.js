@@ -15,11 +15,12 @@ var mediaOptions = {
 };
 var nick = getQueryVariable('nick') || 'anonymous';
 var debug = getQueryVariable('debug') !== false;
+var local = getQueryVariable('local') !== false;
 console.log('opts', mediaOptions, nick);
 
 var webrtc = new SimpleWebRTC({
     // the id/element dom element that will hold "our" video
-    localVideoEl: '',
+    localVideoEl: local ? 'localVideo' : '',
     // the id/element dom element that will hold remote videos
     remoteVideosEl: '',
     // immediately ask for camera access
