@@ -28,11 +28,15 @@ var webrtc = new SimpleWebRTC({
     media: mediaOptions,
     nick: nick
 });
+var joined = false;
 // we have to wait until it's ready
 webrtc.on('readyToCall', function () {
     // you can name it anything
     console.log('readyToCall', webrtc);
-    webrtc.joinRoom('wsdk');
+    if (!joined) {
+        joined = true;
+        webrtc.joinRoom('wsdk');
+    }
 });
 
 webrtc.on('createdPeer', function (peer) {
