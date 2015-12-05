@@ -20,7 +20,7 @@ console.log('opts', mediaOptions, nick);
 
 var webrtc = new SimpleWebRTC({
     // the id/element dom element that will hold "our" video
-    localVideoEl: local ? 'localVideo' : '',
+    localVideoEl: local ? 'local' : '',
     // the id/element dom element that will hold remote videos
     remoteVideosEl: '',
     // immediately ask for camera access
